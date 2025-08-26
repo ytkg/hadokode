@@ -14,12 +14,11 @@ const MediaItem: React.FC<MediaItemProps> = ({ media }) => {
 
   return (
     <div className="media-item">
-      <div className="media-info">
-        <h3 className="media-title">{formatMediaLinkTitle(media.title)}</h3>
-        <p className="media-description">{media.description}</p>
-        <div className="media-services">
-          <strong>配信サービス:</strong>
-          <table className="services-table">
+      <h1 className="media-title">{media.title}</h1>
+      <p className="media-description">{media.description}</p>
+      <div className="media-services">
+        <h2 className="services-heading">配信サービス</h2>
+        <table className="services-table">
             <thead>
               <tr>
                 <th>サービス名</th>

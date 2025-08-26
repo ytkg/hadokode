@@ -1,57 +1,51 @@
 .media-item {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 16px;
-  margin: 0; /* ページ全体の余白は親要素のmainに委ねる */
-  display: flex;
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.media-info {
-  display: flex;
-  flex-direction: column;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .media-title {
+  font-size: 2rem;
   margin-top: 0;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
+  line-height: 1.3;
 }
 
 .media-description {
-  margin-top: 0;
-  margin-bottom: 16px;
+  font-size: 1.1rem;
   color: #555;
+  margin-bottom: 30px;
 }
 
-.media-services {
-  margin-top: auto;
+.services-heading {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 8px;
 }
 
 .services-table {
-  max-width: 600px;
   width: 100%;
   border-collapse: collapse;
-  margin: 10px auto 0;
 }
 
 .services-table th,
 .services-table td {
-  border: 1px solid #ddd;
-  padding: 12px 15px;
+  border: 1px solid #dee2e6;
+  padding: 12px;
   text-align: left;
 }
 
 .services-table th {
-  background-color: #f8f8f8;
-  font-weight: bold;
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+.services-table tr:nth-of-type(even) {
+  background-color: #f8f9fa;
 }
 
 .services-table a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.services-table a:hover {
-  text-decoration: underline;
+  font-weight: 600;
 }
