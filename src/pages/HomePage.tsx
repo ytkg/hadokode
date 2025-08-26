@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import mediaData from '../data/media.json';
 import Seo from '../components/Seo';
-import MediaItem from '../components/MediaItem';
 import './HomePage.css';
 
 const HomePage: React.FC = () => {
@@ -34,9 +33,19 @@ const HomePage: React.FC = () => {
       </div>
       <div className="media-grid">
         {filteredMedia.map(media => (
-          <Link to={`/media/${media.id}`} key={media.id} className="media-card-link">
-            <MediaItem media={media} isSummary={true} />
-          </Link>
+          <div key={media.id} className="home-media-card">
+            <h3 className="home-media-title">
+              <Link to={`/media/${media.id}`}>{media.title}</Link>
+            </h3>
+            <div className="media-services">
+              <strong>配信サービス:</strong>
+              <div className="services-list">
+                {media.services.map((service, index) => (
+                  <span key={index} className="service-tag">{service}</span>
+                ))}
+              </div>
+            </div>
+          </div>
         ))}
       </div>
     </div>
