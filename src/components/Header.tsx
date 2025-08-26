@@ -4,7 +4,7 @@ import './Header.css';
 const Header: React.FC = () => {
   return (
     <header className="header">
-      <h1>ドラマ・映画サブスク検索</h1>
+      <h1>はどこで</h1>
     </header>
   );
 };

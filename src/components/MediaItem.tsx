@@ -1,6 +1,6 @@
 import React from 'react';
 import './MediaItem.css';
-import { Media } from '../types';
+import type { Media } from '../types';
 
 interface MediaItemProps {
   media: Media;
