@@ -1,23 +1,19 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import mediaData from '../data/media.json';
-import vodData from '../data/vod.json';
+import { useMediaData } from '../hooks/useMediaData';
 import Seo from '../components/Seo';
+import MediaCard from '../components/MediaCard';
 import './HomePage.css';
 
 const HomePage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
-
-  const serviceUrlMap: { [key: string]: string } = {};
-  vodData.forEach(service => {
-    serviceUrlMap[service.name] = service.url;
-  });
+  const { getAllMedia, vodServiceMap } = useMediaData();
+  const allMedia = getAllMedia();
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);
   };
 
-  const filteredMedia = mediaData.filter(media =>
+  const filteredMedia = allMedia.filter(media =>
     media.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
@@ -38,32 +34,7 @@ const HomePage: React.FC = () => {
       </div>
       <div className="media-grid">
         {filteredMedia.map(media => (
-          <div key={media.id} className="home-media-card">
-            <h3 className="home-media-title">
-              <Link to={`/media/${media.id}`}>{`『${media.title}』はどこで観れる？`}</Link>
-            </h3>
-            <div className="media-services">
-              <strong>配信サービス:</strong>
-              <div className="services-list">
-                {media.services.map((serviceName, index) => {
-                  const url = serviceUrlMap[serviceName];
-                  return url ? (
-                    <a
-                      key={index}
-                      href={url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="service-tag"
-                    >
-                      {serviceName}
-                    </a>
-                  ) : (
-                    <span key={index} className="service-tag">{serviceName}</span>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
+          <MediaCard key={media.id} media={media} vodServiceMap={vodServiceMap} />
         ))}
       </div>
     </div>

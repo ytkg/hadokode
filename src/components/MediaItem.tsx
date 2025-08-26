@@ -1,19 +1,21 @@
 import React from 'react';
 import './MediaItem.css';
-import type { Media, VodService } from '../types';
-import vodData from '../data/vod.json';
+import type { Media } from '../types';
+import { useMediaData } from '../hooks/useMediaData';
+import { formatMediaLinkTitle } from '../utils/stringUtils';
 
 interface MediaItemProps {
   media: Media;
 }
 
 const MediaItem: React.FC<MediaItemProps> = ({ media }) => {
-  const availableServices: VodService[] = vodData.filter(vod => media.services.includes(vod.name));
+  const { getAvailableServicesForMedia } = useMediaData();
+  const availableServices = getAvailableServicesForMedia(media);
 
   return (
     <div className="media-item">
       <div className="media-info">
-        <h3 className="media-title">{`『${media.title}』はどこで観れる？`}</h3>
+        <h3 className="media-title">{formatMediaLinkTitle(media.title)}</h3>
         <p className="media-description">{media.description}</p>
         <div className="media-services">
           <strong>配信サービス:</strong>

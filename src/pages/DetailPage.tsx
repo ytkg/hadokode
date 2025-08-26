@@ -1,14 +1,14 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
-import mediaData from '../data/media.json';
+import { useParams, Link } from 'react-router-dom';
+import { useMediaData } from '../hooks/useMediaData';
 import MediaItem from '../components/MediaItem';
-import { Link } from 'react-router-dom';
 import Seo from '../components/Seo';
 import './DetailPage.css';
 
 const DetailPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-  const media = mediaData.find(m => m.id === Number(id));
+  const { getMediaById } = useMediaData();
+  const media = getMediaById(Number(id));
 
   if (!media) {
     return <div>作品が見つかりません。</div>;
