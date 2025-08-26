@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import mediaData from '../data/media.json';
 import Seo from '../components/Seo';
+import MediaItem from '../components/MediaItem';
 import './HomePage.css';
 
 const HomePage: React.FC = () => {
@@ -31,13 +32,13 @@ const HomePage: React.FC = () => {
           className="search-input"
         />
       </div>
-      <ul className="media-title-list">
+      <div className="media-grid">
         {filteredMedia.map(media => (
-          <li key={media.id}>
-            <Link to={`/media/${media.id}`}>{`『${media.title}』はどこで観れる？`}</Link>
-          </li>
+          <Link to={`/media/${media.id}`} key={media.id} className="media-card-link">
+            <MediaItem media={media} isSummary={true} />
+          </Link>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

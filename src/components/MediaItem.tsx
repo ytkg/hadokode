@@ -4,14 +4,20 @@ import type { Media } from '../types';
 
 interface MediaItemProps {
   media: Media;
+  isSummary?: boolean;
 }
 
-const MediaItem: React.FC<MediaItemProps> = ({ media }) => {
+const MediaItem: React.FC<MediaItemProps> = ({ media, isSummary = false }) => {
   return (
     <div className="media-item">
+      <img src={media.imageUrl} alt={media.title} className="media-image" />
       <div className="media-info">
-        <h3 className="media-title">{`『${media.title}』はどこで観れる？`}</h3>
-        <p className="media-description">{media.description}</p>
+        <h3 className="media-title">
+          {isSummary ? media.title : `『${media.title}』はどこで観れる？`}
+        </h3>
+        {!isSummary && (
+          <p className="media-description">{media.description}</p>
+        )}
         <div className="media-services">
           <strong>配信サービス:</strong>
           <div className="services-list">
