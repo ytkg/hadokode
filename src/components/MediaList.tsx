@@ -1,5 +1,6 @@
 import React from 'react';
-import MediaItem, { Media } from './MediaItem';
+import MediaItem from './MediaItem';
+import { Media } from '../types';
 import mediaData from '../data/media.json';
 import './MediaList.css';
 

@@ -1,13 +1,6 @@
 import React from 'react';
 import './MediaItem.css';
-
-export interface Media {
-  id: number;
-  title: string;
-  description: string;
-  imageUrl: string;
-  services: string[];
-}
+import { Media } from '../types';
 
 interface MediaItemProps {
   media: Media;
