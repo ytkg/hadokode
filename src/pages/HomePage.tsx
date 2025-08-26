@@ -27,7 +27,6 @@ const HomePage: React.FC = () => {
         title="ホーム"
         description="「あのドラマ、どこで観れる？」を解決。はどこでは、気になる国内ドラマがどの動画配信サービス（サブスク）で視聴可能か、すぐに見つけられるサイトです。"
       />
-      <h2>国内ドラマ一覧</h2>
       <div className="search-container">
         <input
           type="text"
