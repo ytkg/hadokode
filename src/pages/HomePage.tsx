@@ -6,7 +6,7 @@ import './HomePage.css';
 const HomePage: React.FC = () => {
   return (
     <div className="home-page">
-      <h2>すべての作品</h2>
+      <h2>国内ドラマ一覧</h2>
       <ul className="media-title-list">
         {mediaData.map(media => (
           <li key={media.id}>

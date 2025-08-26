@@ -1,10 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
 
 const Header: React.FC = () => {
   return (
     <header className="header">
-      <h1>はどこで</h1>
+      <Link to="/" className="header-link">
+        <h1>はどこで</h1>
+      </Link>
     </header>
   );
 };
