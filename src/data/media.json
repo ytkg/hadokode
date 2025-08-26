@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "title": "とあるSF大作映画",
+    "description": "銀河を股にかけた壮大な冒険が、今始まる。伝説のヒーローは、悪の帝国に立ち向かう。",
+    "imageUrl": "https://via.placeholder.com/150/92c952",
+    "services": ["Netflix", "Hulu", "Amazon Prime"]
+  },
+  {
+    "id": 2,
+    "title": "感動のヒューマンドラマ",
+    "description": "一人の教師と生徒たちの心温まる交流の物語。涙なしでは見られない感動作。",
+    "imageUrl": "https://via.placeholder.com/150/771796",
+    "services": ["U-NEXT"]
+  },
+  {
+    "id": 3,
+    "title": "人気コミック原作アニメ",
+    "description": "特殊能力を持つ高校生たちのバトルアクション。仲間との絆が、世界を救う！",
+    "imageUrl": "https://via.placeholder.com/150/24f355",
+    "services": ["Netflix", "dアニメストア"]
+  },
+  {
+    "id": 4,
+    "title": "ドキドキの恋愛リアリティショー",
+    "description": "見知らぬ男女の共同生活。真実の愛は、そこにあるのか？",
+    "imageUrl": "https://via.placeholder.com/150/d32776",
+    "services": ["Netflix"]
+  },
+  {
+    "id": 5,
+    "title": "往年の名作サスペンス",
+    "description": "完璧な計画のはずだった。一つの綻びが、登場人物たちを狂わせる。",
+    "imageUrl": "https://via.placeholder.com/150/f66b97",
+    "services": ["Hulu", "Amazon Prime"]
+  }
+]
