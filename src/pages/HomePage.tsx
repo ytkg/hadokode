@@ -35,7 +35,7 @@ const HomePage: React.FC = () => {
         {filteredMedia.map(media => (
           <div key={media.id} className="home-media-card">
             <h3 className="home-media-title">
-              <Link to={`/media/${media.id}`}>{media.title}</Link>
+              <Link to={`/media/${media.id}`}>{`『${media.title}』はどこで観れる？`}</Link>
             </h3>
             <div className="media-services">
               <strong>配信サービス:</strong>
