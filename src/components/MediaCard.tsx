@@ -11,14 +11,15 @@ interface MediaCardProps {
 
 const MediaCard: React.FC<MediaCardProps> = ({ media, vodServiceMap }) => {
   return (
-    <Link to={`/media/${media.id}`} className="home-media-card-link">
-      <div className="home-media-card">
-        <div className="home-media-card-body">
-          <h3 className="home-media-title">{formatMediaLinkTitle(media.title)}</h3>
-          <div className="media-services">
-            <strong>配信サービス:</strong>
-            <div className="services-list">
-              {media.services.map((serviceName, index) => {
+    <div className="home-media-card">
+      <div className="home-media-card-body">
+        <h3 className="home-media-title">
+          <Link to={`/media/${media.id}`}>{formatMediaLinkTitle(media.title)}</Link>
+        </h3>
+        <div className="media-services">
+          <strong>配信サービス:</strong>
+          <div className="services-list">
+            {media.services.map((serviceName, index) => {
                 const service = vodServiceMap.get(serviceName);
                 return service ? (
                   <a
@@ -37,8 +38,7 @@ const MediaCard: React.FC<MediaCardProps> = ({ media, vodServiceMap }) => {
             </div>
           </div>
         </div>
-      </div>
-    </Link>
+    </div>
   );
 };
 
