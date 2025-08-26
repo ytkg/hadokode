@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { useMediaData } from '../hooks/useMediaData';
 import MediaItem from '../components/MediaItem';
 import Seo from '../components/Seo';
+import { formatMediaLinkTitle } from '../utils/stringUtils';
 import './DetailPage.css';
 
 const DetailPage: React.FC = () => {
@@ -19,7 +20,7 @@ const DetailPage: React.FC = () => {
   return (
     <div className="detail-page">
       <Seo
-        title={`『${media.title}』はどこで観れる？`}
+        title={formatMediaLinkTitle(media.title)}
         description={description}
       />
       <MediaItem media={media} />
