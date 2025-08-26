@@ -11,7 +11,7 @@ const MediaItem: React.FC<MediaItemProps> = ({ media }) => {
     <div className="media-item">
       <img src={media.imageUrl} alt={media.title} className="media-image" />
       <div className="media-info">
-        <h3 className="media-title">{media.title}</h3>
+        <h3 className="media-title">{`『${media.title}』はどこで観れる？`}</h3>
         <p className="media-description">{media.description}</p>
         <div className="media-services">
           <strong>配信サービス:</strong>

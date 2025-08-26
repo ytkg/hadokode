@@ -10,7 +10,7 @@ const HomePage: React.FC = () => {
       <ul className="media-title-list">
         {mediaData.map(media => (
           <li key={media.id}>
-            <Link to={`/media/${media.id}`}>{media.title}</Link>
+            <Link to={`/media/${media.id}`}>{`『${media.title}』はどこで観れる？`}</Link>
           </li>
         ))}
       </ul>
