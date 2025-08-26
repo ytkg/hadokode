@@ -4,7 +4,7 @@ import './Footer.css';
 const Footer: React.FC = () => {
   return (
     <footer className="footer">
-      <p>&copy; 2024 はどこで. All Rights Reserved.</p>
+      <p>&copy; {new Date().getFullYear()} はどこで. All Rights Reserved.</p>
     </footer>
   );
 };
