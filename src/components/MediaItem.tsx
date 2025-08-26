@@ -10,7 +10,6 @@ interface MediaItemProps {
 const MediaItem: React.FC<MediaItemProps> = ({ media, isSummary = false }) => {
   return (
     <div className="media-item">
-      <img src={media.imageUrl} alt={media.title} className="media-image" />
       <div className="media-info">
         <h3 className="media-title">
           {isSummary ? media.title : `『${media.title}』はどこで観れる？`}
