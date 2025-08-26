@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Netflix",
+    "fee": "月額990円〜",
+    "url": "https://www.netflix.com/"
+  },
+  {
+    "name": "Hulu",
+    "fee": "月額1,026円",
+    "url": "https://www.hulu.jp/"
+  },
+  {
+    "name": "Amazon Prime",
+    "fee": "月額600円",
+    "url": "https://www.amazon.co.jp/prime"
+  },
+  {
+    "name": "U-NEXT",
+    "fee": "月額2,189円",
+    "url": "https://video.unext.jp/"
+  },
+  {
+    "name": "FOD",
+    "fee": "月額976円",
+    "url": "https://fod.fujitv.co.jp/"
+  },
+  {
+    "name": "TVer",
+    "fee": "無料",
+    "url": "https://tver.jp/"
+  },
+  {
+    "name": "Paravi",
+    "fee": "月額1,017円",
+    "url": "https://www.paravi.jp/"
+  }
+]

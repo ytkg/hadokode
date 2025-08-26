@@ -1,12 +1,15 @@
 import React from 'react';
 import './MediaItem.css';
-import type { Media } from '../types';
+import type { Media, VodService } from '../types';
+import vodData from '../data/vod.json';
 
 interface MediaItemProps {
   media: Media;
 }
 
 const MediaItem: React.FC<MediaItemProps> = ({ media }) => {
+  const availableServices: VodService[] = vodData.filter(vod => media.services.includes(vod.name));
+
   return (
     <div className="media-item">
       <div className="media-info">
@@ -14,11 +17,28 @@ const MediaItem: React.FC<MediaItemProps> = ({ media }) => {
         <p className="media-description">{media.description}</p>
         <div className="media-services">
           <strong>配信サービス:</strong>
-          <div className="services-list">
-            {media.services.map((service, index) => (
-              <span key={index} className="service-tag">{service}</span>
-            ))}
-          </div>
+          <table className="services-table">
+            <thead>
+              <tr>
+                <th>サービス名</th>
+                <th>月額</th>
+                <th>公式サイト</th>
+              </tr>
+            </thead>
+            <tbody>
+              {availableServices.map((service) => (
+                <tr key={service.name}>
+                  <td>{service.name}</td>
+                  <td>{service.fee}</td>
+                  <td>
+                    <a href={service.url} target="_blank" rel="noopener noreferrer">
+                      公式サイト
+                    </a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
     </div>

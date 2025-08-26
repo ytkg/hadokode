@@ -5,3 +5,9 @@ export interface Media {
   imageUrl: string;
   services: string[];
 }
+
+export interface VodService {
+  name: string;
+  fee: string;
+  url: string;
+}

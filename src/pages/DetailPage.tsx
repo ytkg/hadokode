@@ -14,8 +14,7 @@ const DetailPage: React.FC = () => {
     return <div>作品が見つかりません。</div>;
   }
 
-  const services = media.services.join('、');
-  const description = `『${media.title}』は${services}で配信中です。料金やポイントについても解説しています。`;
+  const description = `『${media.title}』の配信情報をチェック。`;
 
   return (
     <div className="detail-page">
