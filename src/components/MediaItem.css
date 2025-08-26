@@ -28,17 +28,30 @@
   margin-top: auto;
 }
 
-.services-list {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-top: 8px;
+.services-table {
+  max-width: 600px;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px auto 0;
 }
 
-.service-tag {
-  background-color: #e0e0e0;
-  color: #333;
-  padding: 4px 8px;
-  border-radius: 16px;
-  font-size: 0.9em;
+.services-table th,
+.services-table td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.services-table th {
+  background-color: #f8f8f8;
+  font-weight: bold;
+}
+
+.services-table a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.services-table a:hover {
+  text-decoration: underline;
 }
