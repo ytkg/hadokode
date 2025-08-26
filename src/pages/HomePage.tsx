@@ -1,0 +1,21 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import mediaData from '../data/media.json';
+import './HomePage.css';
+
+const HomePage: React.FC = () => {
+  return (
+    <div className="home-page">
+      <h2>国内ドラマ一覧</h2>
+      <ul className="media-title-list">
+        {mediaData.map(media => (
+          <li key={media.id}>
+            <Link to={`/media/${media.id}`}>{`『${media.title}』はどこで観れる？`}</Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default HomePage;

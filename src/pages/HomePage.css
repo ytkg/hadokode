@@ -1,0 +1,24 @@
+.home-page {
+  padding: 20px;
+}
+
+.media-title-list {
+  list-style: none;
+  padding: 0;
+}
+
+.media-title-list li {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.media-title-list a {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.2s;
+}
+
+.media-title-list a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
