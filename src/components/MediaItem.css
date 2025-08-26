@@ -29,9 +29,10 @@
 }
 
 .services-table {
+  max-width: 600px;
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px;
+  margin: 10px auto 0;
 }
 
 .services-table th,
