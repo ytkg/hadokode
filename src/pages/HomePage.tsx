@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import mediaData from '../data/media.json';
+import vodData from '../data/vod.json';
 import Seo from '../components/Seo';
 import './HomePage.css';
 
 const HomePage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
+
+  const serviceUrlMap: { [key: string]: string } = {};
+  vodData.forEach(service => {
+    serviceUrlMap[service.name] = service.url;
+  });
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);
@@ -40,9 +46,22 @@ const HomePage: React.FC = () => {
             <div className="media-services">
               <strong>配信サービス:</strong>
               <div className="services-list">
-                {media.services.map((service, index) => (
-                  <span key={index} className="service-tag">{service}</span>
-                ))}
+                {media.services.map((serviceName, index) => {
+                  const url = serviceUrlMap[serviceName];
+                  return url ? (
+                    <a
+                      key={index}
+                      href={url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="service-tag"
+                    >
+                      {serviceName}
+                    </a>
+                  ) : (
+                    <span key={index} className="service-tag">{serviceName}</span>
+                  );
+                })}
               </div>
             </div>
           </div>
