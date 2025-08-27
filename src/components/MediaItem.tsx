@@ -28,17 +28,21 @@ const MediaItem: React.FC<MediaItemProps> = ({ media }) => {
             <tr>
               <th>サービス名</th>
               <th>月額</th>
-              <th>公式サイト</th>
+              <th>視聴する</th>
             </tr>
           </thead>
           <tbody>
             {availableServices.map((service) => (
               <tr key={service.name}>
-                <td>{service.name}</td>
+                <td>
+                  <a href={service.url} target="_blank" rel="noopener noreferrer" className="service-name-link">
+                    {service.name}
+                  </a>
+                </td>
                 <td>{service.fee}</td>
                 <td>
-                  <a href={service.url} target="_blank" rel="noopener noreferrer">
-                    公式サイト
+                  <a href={service.url} target="_blank" rel="noopener noreferrer" className="service-link-button">
+                    {service.name}で見る
                   </a>
                 </td>
               </tr>
