@@ -2,36 +2,71 @@
   {
     "name": "Netflix",
     "fee": "月額990円〜",
-    "url": "https://www.netflix.com/"
+    "url": "https://www.netflix.com/",
+    "otherDramas": [
+      "ストレンジャー・シングス 未知の世界",
+      "愛の不時着",
+      "今際の国のアリス"
+    ]
   },
   {
     "name": "Hulu",
     "fee": "月額1,026円",
-    "url": "https://www.hulu.jp/"
+    "url": "https://www.hulu.jp/",
+    "otherDramas": [
+      "ウォーキング・デッド",
+      "君と世界が終わる日に",
+      "3年A組 —今から皆さんは、人質です—"
+    ]
   },
   {
     "name": "Amazon Prime",
     "fee": "月額600円",
-    "url": "https://www.amazon.co.jp/prime"
+    "url": "https://www.amazon.co.jp/prime",
+    "otherDramas": [
+      "ザ・ボーイズ",
+      "HITOSHI MATSUMOTO Presents ドキュメンタル",
+      "バチェラー・ジャパン"
+    ]
   },
   {
     "name": "U-NEXT",
     "fee": "月額2,189円",
-    "url": "https://video.unext.jp/"
+    "url": "https://video.unext.jp/",
+    "otherDramas": [
+      "ゲーム・オブ・スローンズ",
+      "セックス・アンド・ザ・シティ",
+      "鬼滅の刃"
+    ]
   },
   {
     "name": "FOD",
     "fee": "月額976円",
-    "url": "https://fod.fujitv.co.jp/"
+    "url": "https://fod.fujitv.co.jp/",
+    "otherDramas": [
+      "リッチマン、プアウーマン",
+      "コンフィデンスマンJP",
+      "監察医 朝顔"
+    ]
   },
   {
     "name": "TVer",
     "fee": "無料",
-    "url": "https://tver.jp/"
+    "url": "https://tver.jp/",
+    "otherDramas": [
+      "最新のドラマ見逃し配信",
+      "バラエティ番組",
+      "ドキュメンタリー"
+    ]
   },
   {
     "name": "Paravi",
     "fee": "月額1,017円",
-    "url": "https://www.paravi.jp/"
+    "url": "https://www.paravi.jp/",
+    "otherDramas": [
+      "半沢直樹",
+      "VIVANT",
+      "水曜日のダウンタウン"
+    ]
   }
 ]
