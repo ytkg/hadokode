@@ -3,7 +3,13 @@
 }
 
 .search-container {
-  margin-bottom: 30px;
+  position: sticky;
+  top: 60px; /* Adjust this value based on the actual header height */
+  z-index: 999;
+  background-color: #fff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
