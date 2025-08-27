@@ -50,3 +50,37 @@
 .services-table a {
   font-weight: 600;
 }
+
+.other-dramas-row td {
+  background-color: #fdfdfd;
+  border-top: 2px dashed #007bff;
+}
+
+.other-dramas-container {
+  padding: 15px;
+}
+
+.other-dramas-heading {
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #0056b3;
+}
+
+.other-dramas-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.other-dramas-list li {
+  background-color: #e9ecef;
+  padding: 8px 12px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}

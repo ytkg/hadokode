@@ -9,5 +9,6 @@ export interface Media {
 export interface VodService {
   name: string;
   fee: string;
-  url: string;
+  url:string;
+  otherDramas?: string[];
 }

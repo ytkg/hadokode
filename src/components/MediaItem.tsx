@@ -28,15 +28,31 @@ const MediaItem: React.FC<MediaItemProps> = ({ media }) => {
             </thead>
             <tbody>
               {availableServices.map((service) => (
-                <tr key={service.name}>
-                  <td>{service.name}</td>
-                  <td>{service.fee}</td>
-                  <td>
-                    <a href={service.url} target="_blank" rel="noopener noreferrer">
-                      公式サイト
-                    </a>
-                  </td>
-                </tr>
+                <React.Fragment key={service.name}>
+                  <tr>
+                    <td>{service.name}</td>
+                    <td>{service.fee}</td>
+                    <td>
+                      <a href={service.url} target="_blank" rel="noopener noreferrer">
+                        公式サイト
+                      </a>
+                    </td>
+                  </tr>
+                  {service.otherDramas && service.otherDramas.length > 0 && (
+                    <tr className="other-dramas-row">
+                      <td colSpan={3}>
+                        <div className="other-dramas-container">
+                          <h3 className="other-dramas-heading">このサービスで観られる他の人気作品</h3>
+                          <ul className="other-dramas-list">
+                            {service.otherDramas.map((drama, index) => (
+                              <li key={index}>{drama}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                  )}
+                </React.Fragment>
               ))}
             </tbody>
           </table>
