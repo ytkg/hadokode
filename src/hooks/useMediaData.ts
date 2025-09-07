@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import mediaData from '../data/media.json';
+import mediaRaw from '../data/media.jsonl?raw';
 import vodData from '../data/vod.json';
 import type { Media, VodService } from '../types';
 
@@ -12,6 +12,13 @@ const vodServiceMap = new Map<string, VodService>(
  * メディアとVODサービスに関するデータを取得・操作するためのカスタムフック
  */
 export const useMediaData = () => {
+  // JSONLをパースしてMedia配列を生成（ビルド時に一度だけ評価）
+  const mediaData: Media[] = mediaRaw
+    .trim()
+    .split('\n')
+    .filter(Boolean)
+    .map((line) => JSON.parse(line) as Media);
+
   /**
    * すべてのメディアデータを取得します。
    * @returns {Media[]} すべてのメディアの配列
